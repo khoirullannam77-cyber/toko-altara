@@ -1,296 +1,380 @@
-
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="ALATARA Outdoor Rental menyediakan perlengkapan camping berkualitas dengan harga terjangkau.">
+    <meta name="description"
+        content="ALATARA Outdoor Rental menyediakan perlengkapan camping berkualitas dengan harga terjangkau.">
 
     <title>ALATARA | Outdoor Rental</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="header">
-    <nav class="navbar">
-        <a href="#home" class="logo">AL<span>TARA.</span></a>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <img src="logo-altara.jpeg" alt="Logo ALATARA">
+            </a>
 
-        <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">
-            ☰
-        </button>
+            <button class="menu-btn" id="menuBtn" aria-label="Buka menu" aria-expanded="false">
+                ☰
+            </button>
 
-        <div class="nav-links" id="navLinks">
-            <a href="#home">Beranda</a>
-            <a href="#about">Tentang</a>
-            <a href="#catalog">Peralatan</a>
-            <a href="#steps">Cara Sewa</a>
-            <a href="#contact">Kontak</a>
-        </div>
-    </nav>
-</header>
-
-<main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <span class="tag">EXPLORE NATURE WITH US</span>
-
-            <h1>Temukan Petualanganmu Bersama Alam.</h1>
-
-            <p>
-                Sewa perlengkapan outdoor berkualitas untuk menemani
-                perjalanan dan petualanganmu bersama ALATARA.
-            </p>
-
-            <a href="#catalog" class="btn">Jelajahi Peralatan ↗</a>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about section" id="about">
-        <div class="about-image">
-            <img
-                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=900"
-                alt="Suasana alam terbuka"
-                loading="lazy">
-        </div>
-
-        <div class="about-content">
-            <span class="subtitle">ABOUT ALATARA</span>
-
-            <h2>Lebih Dekat Dengan Alam.</h2>
-
-            <p>
-                ALATARA Outdoor Rental hadir untuk membantu perjalananmu
-                menjadi lebih mudah. Kami menyediakan berbagai perlengkapan
-                camping dengan harga sewa yang terjangkau.
-            </p>
-
-            <div class="features">
-                <span>✓ Peralatan Berkualitas</span>
-                <span>✓ Harga Terjangkau</span>
-                <span>✓ Mudah Disewa</span>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Beranda</a>
+                <a href="#about">Tentang</a>
+                <a href="#catalog">Peralatan</a>
+                <a href="#steps">Cara Sewa</a>
+                <a href="#contact">Kontak</a>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <!-- CATALOG -->
-    <section class="catalog section" id="catalog">
-        <div class="section-heading">
-            <span class="subtitle">OUR EQUIPMENT</span>
-            <h2>Daftar Harga Sewa</h2>
-            <p>Temukan perlengkapan yang kamu butuhkan.</p>
-        </div>
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="tag">EXPLORE NATURE WITH US</span>
 
-        <div class="search-wrapper">
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="Cari perlengkapan outdoor..."
-                aria-label="Cari produk">
-        </div>
+                <h1>Selamat Datang Di ALTARA</h1>
+            
 
-        <div class="filters">
-            <button class="filter active" data-category="all">Semua</button>
-            <button class="filter" data-category="tenda">Tenda</button>
-            <button class="filter" data-category="carrier">Carrier</button>
-            <button class="filter" data-category="tidur">Perlengkapan Tidur</button>
-            <button class="filter" data-category="masak">Peralatan Masak</button>
-            <button class="filter" data-category="lainnya">Lainnya</button>
-        </div>
+                <p>
+                    Sewa perlengkapan outdoor berkualitas untuk menemani
+                    perjalanan dan petualanganmu bersama ALATARA.
+                </p>
 
-        <div class="products" id="products">
+                <a href="#catalog" class="btn">Jelajahi Peralatan ↗</a>
+            </div>
+        </section>
 
-            <article class="product" data-category="tenda" data-name="naturehike">
-                <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600"
-                    alt="NatureHike" loading="lazy">
-                <div class="product-info">
-                    <span class="category">TENDA</span>
-                    <h3>NatureHike</h3>
-                    <p class="price">Rp90.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="NatureHike" data-price="90000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="tenda" data-name="double layer">
-                <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600"
-                    alt="Double Layer" loading="lazy">
-                <div class="product-info">
-                    <span class="category">TENDA</span>
-                    <h3>Double Layer</h3>
-                    <p class="price">Rp45.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Double Layer" data-price="45000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="carrier" data-name="carrier">
-                <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600"
-                    alt="Carrier" loading="lazy">
-                <div class="product-info">
-                    <span class="category">CARRIER</span>
-                    <h3>Carrier</h3>
-                    <p class="price">Rp25.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Carrier" data-price="25000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="lainnya" data-name="hydro pack">
-                <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=600"
-                    alt="Hydro Pack" loading="lazy">
-                <div class="product-info">
-                    <span class="category">AKSESORIS</span>
-                    <h3>Hydro Pack</h3>
-                    <p class="price">Rp13.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Hydro Pack" data-price="13000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="lainnya" data-name="tracking pole">
-                <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=600"
-                    alt="Tracking Pole" loading="lazy">
-                <div class="product-info">
-                    <span class="category">AKSESORIS</span>
-                    <h3>Tracking Pole</h3>
-                    <p class="price">Rp13.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Tracking Pole" data-price="13000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="tidur" data-name="sleeping bag">
-                <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600"
-                    alt="Sleeping Bag" loading="lazy">
-                <div class="product-info">
-                    <span class="category">PERLENGKAPAN TIDUR</span>
-                    <h3>Sleeping Bag</h3>
-                    <p class="price">Rp10.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Sleeping Bag" data-price="10000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="lainnya" data-name="flysheet 4x6">
-                <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600"
-                    alt="Flysheet 4x6" loading="lazy">
-                <div class="product-info">
-                    <span class="category">PERLENGKAPAN CAMPING</span>
-                    <h3>Flysheet 4 × 6</h3>
-                    <p class="price">Rp20.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Flysheet 4x6" data-price="20000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="lainnya" data-name="flysheet 3x4">
-                <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600"
-                    alt="Flysheet 3x4" loading="lazy">
-                <div class="product-info">
-                    <span class="category">PERLENGKAPAN CAMPING</span>
-                    <h3>Flysheet 3 × 4</h3>
-                    <p class="price">Rp15.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Flysheet 3x4" data-price="15000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="masak" data-name="kompor camping">
-                <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600"
-                    alt="Kompor Camping" loading="lazy">
-                <div class="product-info">
-                    <span class="category">PERALATAN MASAK</span>
-                    <h3>Kompor Camping</h3>
-                    <p class="price">Rp20.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Kompor Camping" data-price="20000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="masak" data-name="cooking set">
-                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600"
-                    alt="Cooking Set" loading="lazy">
-                <div class="product-info">
-                    <span class="category">PERALATAN MASAK</span>
-                    <h3>Cooking Set</h3>
-                    <p class="price">Rp10.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Cooking Set" data-price="10000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="lainnya" data-name="meja camping">
-                <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=600"
-                    alt="Meja Camping" loading="lazy">
-                <div class="product-info">
-                    <span class="category">PERLENGKAPAN CAMPING</span>
-                    <h3>Meja Camping</h3>
-                    <p class="price">Rp23.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Meja Camping" data-price="23000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-            <article class="product" data-category="lainnya" data-name="kursi camping">
-                <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=600"
-                    alt="Kursi Camping" loading="lazy">
-                <div class="product-info">
-                    <span class="category">PERLENGKAPAN CAMPING</span>
-                    <h3>Kursi Camping</h3>
-                    <p class="price">Rp13.000 <small>/ hari</small></p>
-                    <button class="order-btn" data-product="Kursi Camping" data-price="13000">Pesan Sekarang ↗</button>
-                </div>
-            </article>
-
-        </div>
-
-        <p id="emptyMessage" class="empty-message" hidden>Produk tidak ditemukan.</p>
-    </section>
-
-    <!-- CARA SEWA -->
-    <section class="steps-section section" id="steps">
-        <div class="section-heading">
-            <span class="subtitle">HOW TO RENT</span>
-            <h2>Cara Mudah Menyewa</h2>
-            <p>Hanya dengan tiga langkah sederhana.</p>
-        </div>
-
-        <div class="steps">
-            <div class="step">
-                <span>01</span>
-                <h3>Pilih Peralatan</h3>
-                <p>Pilih perlengkapan outdoor sesuai kebutuhanmu.</p>
+        <!-- ABOUT -->
+        <section class="about section" id="about">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=900" alt="Suasana alam terbuka"
+                    loading="lazy">
             </div>
 
-            <div class="step">
-                <span>02</span>
-                <h3>Hubungi Kami</h3>
-                <p>Hubungi admin untuk mengecek ketersediaan barang.</p>
+            <div class="about-content">
+                <span class="subtitle">ABOUT ALATARA</span>
+
+                <h2>Lebih Dekat Dengan Alam.</h2>
+
+                <p>
+                    ALATARA Outdoor Rental hadir untuk membantu perjalananmu
+                    menjadi lebih mudah. Kami menyediakan berbagai perlengkapan
+                    camping dengan harga sewa yang terjangkau.
+                </p>
+
+                <div class="features">
+                    <span>✓ Peralatan Berkualitas</span>
+                    <span>✓ Harga Terjangkau</span>
+                    <span>✓ Mudah Disewa</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATALOG -->
+        <section class="catalog section catalog-section" id="catalog">
+            <div class="section-heading">
+                <span class="subtitle">OUR EQUIPMENT</span>
+                <h2>Daftar Harga Sewa</h2>
+                <p>Temukan perlengkapan yang kamu butuhkan.</p>
             </div>
 
-            <div class="step">
-                <span>03</span>
-                <h3>Ambil Peralatan</h3>
-                <p>Selesaikan proses penyewaan dan nikmati petualanganmu.</p>
+            <div class="search-wrapper">
+                <input type="search" id="searchInput" placeholder="Cari perlengkapan outdoor..."
+                    aria-label="Cari produk">
             </div>
+
+            <div class="filters">
+                <button class="filter active" data-category="all">Semua</button>
+                <button class="filter" data-category="tenda">Tenda</button>
+                <button class="filter" data-category="carrier">Carrier</button>
+                <button class="filter" data-category="tidur">Perlengkapan Tidur</button>
+                <button class="filter" data-category="masak">Peralatan Masak</button>
+                <button class="filter" data-category="flysheet">Flysheet</button>
+                <button class="filter" data-category="lainnya">Lainnya</button>
+
+            </div>
+
+            <div class="products" id="products">
+
+                <article class="product" data-category="tenda" data-name="naturehike">
+                    <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600" alt="NatureHike"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">TENDA</span>
+                        <h3>NatureHike</h3>
+                        <p>Kapasitas 1-2 orang</p>
+                        <p class="price">Rp90.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="NatureHike" data-price="90000">Pesan Sekarang ↗</button>
+                    </div>
+                </article>
+
+                <article class="product" data-category="tenda" data-name="double layer">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600" alt="Double Layer"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">TENDA</span>
+                        <h3>Double Layer</h3>
+                        <p>kapasitas 2-3 orang</p>
+                        <p class="price">Rp45.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Double Layer" data-price="45000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+                <article class="product" data-category="tenda" data-name="double layer">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600" alt="Double Layer"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">TENDA</span>
+                        <h3>Single Layer</h3>
+                        <p>kapasitas 1-2 orang</p>
+                        <p class="price">Rp20.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Double Layer" data-price="45000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+                <article class="product" data-category="tenda" data-name="double layer">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600" alt="Double Layer"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">TENDA</span>
+                        <h3>Double Layer Big</h3>
+                        <p>kapasitas 6-7 orang</p>
+                        <p class="price">Rp45.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Double Layer" data-price="45000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+
+                <article class="product" data-category="carrier" data-name="carrier">
+                    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600" alt="Carrier"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">CARRIER</span>
+                        <h3>Carrier</h3>
+                        <p class="price">Rp25.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Carrier" data-price="25000">Pesan Sekarang ↗</button>
+                    </div>
+                </article>
+
+                <article class="product" data-category="lainnya" data-name="hydro pack">
+                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=600" alt="Hydro Pack"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">AKSESORIS</span>
+                        <h3>Hydro Pack</h3>
+                        <p class="price">Rp13.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Hydro Pack" data-price="13000">Pesan Sekarang ↗</button>
+                    </div>
+                </article>
+
+                <article class="product" data-category="lainnya" data-name="tracking pole">
+                    <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=600" alt="Tracking Pole"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">AKSESORIS</span>
+                        <h3>Tracking Pole</h3>
+                        <p class="price">Rp13.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Tracking Pole" data-price="13000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+
+                <article class="product" data-category="tidur" data-name="sleeping bag">
+                    <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=600" alt="Sleeping Bag"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERLENGKAPAN TIDUR</span>
+                        <h3>Sleeping Bag</h3>
+                        <p class="price">Rp10.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Sleeping Bag" data-price="10000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+
+                <article class="product" data-category="flysheet" data-name="flysheet 4x6">
+                    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600" alt="Flysheet 4x6"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERLENGKAPAN CAMPING</span>
+                        <h3>Flysheet 4 × 6</h3>
+                        <p class="price">Rp20.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Flysheet 4x6" data-price="20000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+
+                <article class="product" data-category="flysheet" data-name="flysheet 3x4">
+                    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600" alt="Flysheet 3x4"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERLENGKAPAN CAMPING</span>
+                        <h3>Flysheet 3 × 4</h3>
+                        <p class="price">Rp15.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Flysheet 3x4" data-price="15000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+                <article class="product" data-category="flysheet" data-name="flysheet 3x4">
+                    <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=600" alt="Flysheet 3x4"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERLENGKAPAN CAMPING</span>
+                        <h3>Flysheet 3 × 2</h3>
+                        <p class="price">Rp15.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Flysheet 3x4" data-price="15000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+
+                <article class="product" data-category="masak" data-name="kompor camping">
+                    <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=600" alt="Kompor Camping"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERALATAN MASAK</span>
+                        <h3>Kompor Camping</h3>
+                        <p class="price">Rp20.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Kompor Camping" data-price="20000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+
+
+                <article class="product" data-category="lainnya" data-name="meja camping">
+                    <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=600" alt="Meja Camping"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERLENGKAPAN CAMPING</span>
+                        <h3>Meja Camping</h3>
+                        <p class="price">Rp23.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Meja Camping" data-price="23000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+
+                <article class="product" data-category="lainnya" data-name="kursi camping">
+                    <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?w=600" alt="Kursi Camping"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERLENGKAPAN CAMPING</span>
+                        <h3>Kursi Camping</h3>
+                        <p class="price">Rp13.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Kursi Camping" data-price="13000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+                <article class="product" data-category="masak" data-name="cooking set">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600" alt="Cooking Set"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERALATAN MASAK</span>
+                        <h3>Cooking Set</h3>
+                        <p class="price">Rp10.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Cooking Set" data-price="10000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+                <article class="product" data-category="masak" data-name="cooking set">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600" alt="Cooking Set"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERALATAN MASAK</span>
+                        <h3>Cooking Set</h3>
+                        <p class="price">Rp10.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Cooking Set" data-price="10000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+                <article class="product" data-category="masak" data-name="cooking set">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600" alt="Cooking Set"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERALATAN MASAK</span>
+                        <h3>Cooking Set</h3>
+                        <p class="price">Rp10.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Cooking Set" data-price="10000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+                <article class="product" data-category="masak" data-name="cooking set">
+                    <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=600" alt="Cooking Set"
+                        loading="lazy">
+                    <div class="product-info">
+                        <span class="category">PERALATAN MASAK</span>
+                        <h3>Cooking Set</h3>
+                        <p class="price">Rp10.000 <small>/ hari</small></p>
+                        <button class="order-btn" data-product="Cooking Set" data-price="10000">Pesan Sekarang
+                            ↗</button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="emptyMessage" class="empty-message" hidden>Produk tidak ditemukan.</p>
+        </section>
+
+        <!-- CARA SEWA -->
+        <section class="steps-section section" id="steps">
+            <div class="section-heading">
+                <span class="subtitle">HOW TO RENT</span>
+                <h2>Cara Mudah Menyewa</h2>
+                <p>Hanya dengan tiga langkah sederhana.</p>
+            </div>
+
+            <div class="steps">
+                <div class="step">
+                    <span>01</span>
+                    <h3>Pilih Peralatan</h3>
+                    <p>Pilih perlengkapan outdoor sesuai kebutuhanmu.</p>
+                </div>
+
+                <div class="step">
+                    <span>02</span>
+                    <h3>Hubungi Kami</h3>
+                    <p>Hubungi admin untuk mengecek ketersediaan barang.</p>
+                </div>
+
+                <div class="step">
+                    <span>03</span>
+                    <h3>Ambil Peralatan</h3>
+                    <p>Selesaikan proses penyewaan dan nikmati petualanganmu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK -->
+        <section class="contact section" id="contact">
+            <span class="subtitle">LET'S EXPLORE</span>
+            <h2>Siap Memulai Petualangan?</h2>
+            <p>Persiapkan perlengkapanmu bersama ALATARA.</p>
+            <button class="btn contact-btn" id="contactBtn">Hubungi Admin ↗</button>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div>
+            <a href="#home" class="logo">ALA<span>TARA.</span></a>
+            <p>Explore Nature, Create Memories.</p>
         </div>
-    </section>
+        <p>© 2026 ALATARA Outdoor Rental.</p>
+    </footer>
 
-    <!-- KONTAK -->
-    <section class="contact section" id="contact">
-        <span class="subtitle">LET'S EXPLORE</span>
-        <h2>Siap Memulai Petualangan?</h2>
-        <p>Persiapkan perlengkapanmu bersama ALATARA.</p>
-        <button class="btn contact-btn" id="contactBtn">Hubungi Admin ↗</button>
-    </section>
-</main>
-
-<footer class="footer">
-    <div>
-        <a href="#home" class="logo">ALA<span>TARA.</span></a>
-        <p>Explore Nature, Create Memories.</p>
-    </div>
-    <p>© 2026 ALATARA Outdoor Rental.</p>
-</footer>
-
-<script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
+
 </html>

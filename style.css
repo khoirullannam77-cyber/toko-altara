@@ -3,7 +3,7 @@
     --green: #244c38;
     --dark: #193426;
     --cream: #f4f1e8;
-    --beige: #e9e2d0;
+    --beige: #d0e9d7;
     --brown: #795b40;
     --white: #ffffff;
     --text: #1a1c1b;
@@ -50,28 +50,34 @@ img {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(250,249,245,.97);
-    border-bottom: 1px solid #e8e5dc;
+    background: rgba(212, 209, 198, 0.97);
+    border-bottom:none;
 }
 
 .navbar {
+    background-color: #0e1311;
     min-height: 72px;
-    padding: 12px 8%;
+    padding: 12px 3% 12px 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* LOGO NAVBAR */
 .logo {
-    font-size: 25px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    color: var(--green);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.logo span {
-    color: var(--brown);
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
 }
+
+
 
 .nav-links {
     display: flex;
@@ -92,9 +98,10 @@ img {
 .menu-btn {
     display: none;
     border: none;
+    
     background: none;
     font-size: 27px;
-    color: var(--green);
+    color:white;
     cursor: pointer;
     padding: 8px;
 }
@@ -120,7 +127,7 @@ img {
 .tag {
     display: inline-block;
     padding: 10px 16px;
-    background: #ffffff20;
+    background: #110e0e76;
     border: 1px solid #ffffff65;
     border-radius: 30px;
     font-size: 12px;
@@ -146,10 +153,10 @@ img {
     justify-content: center;
     min-height: 48px;
     padding: 13px 24px;
-    background: #d7bc8c;
+    background: #fdfd02;
     color: var(--dark);
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-weight: 700;
     cursor: pointer;
     margin-top: 28px;
@@ -157,7 +164,7 @@ img {
 }
 
 .btn:hover {
-    background: white;
+    background: rgba(249, 249, 3, 0.594);
     transform: translateY(-3px);
 }
 
@@ -447,10 +454,14 @@ img {
 
 /* MOBILE */
 @media (max-width: 768px) {
+    .logo img {
+    width: 45px;
+    height: 45px;
+}
     .navbar {
-        min-height: 65px;
-    }
-
+    padding-left: 8px;
+    padding-right: 5%;
+}
     .menu-btn {
         display: block;
     }
@@ -582,5 +593,152 @@ img {
     *, *::before, *::after {
         transition-duration: .01ms !important;
         animation-duration: .01ms !important;
+    }
+}
+
+/* =================================
+   KATALOG BACKGROUND PEGUNUNGAN
+================================= */
+
+.catalog-section {
+    background:
+        linear-gradient(
+            rgba(10, 15, 12, 0.65),
+            rgba(10, 15, 12, 0.75)
+        ),
+        url("background-produk.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* JUDUL KATALOG */
+.catalog-section .section-heading h2 {
+    color: #ffffff;
+}
+
+.catalog-section .section-heading p {
+    color: #dddddd;
+}
+
+/* SUBTITLE */
+.catalog-section .section-heading .subtitle {
+    color: #c4d5bd;
+}
+
+/* KARTU PRODUK */
+
+/* =================================
+   KATALOG BACKGROUND PEGUNUNGAN
+================================= */
+
+.catalog-section {
+    background:
+        linear-gradient(
+            rgba(10, 15, 12, 0.65),
+            rgba(10, 15, 12, 0.75)
+        ),
+        url("background-produk.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* JUDUL KATALOG */
+.catalog-section .section-heading h2 {
+    color: #ffffff;
+}
+
+.catalog-section .section-heading p {
+    color: #dddddd;
+}
+
+/* SUBTITLE */
+.catalog-section .section-heading .subtitle {
+    color: #c4d5bd;
+}
+
+/* KARTU PRODUK */
+.catalog-section .product {
+    background: rgba(20, 49, 37, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* NAMA PRODUK */
+.catalog-section .product h3 {
+    color: #ffffff;
+}
+
+/* DESKRIPSI PRODUK */
+
+/* FROSTED GLASS - CARD PRODUK */
+.catalog-section .product {
+    background: rgba(255, 255, 255, 0.13);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.20),
+        inset 0 1px 1px rgba(255, 255, 255, 0.20);
+
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+/* AREA INFORMASI PRODUK */
+.catalog-section .product-info {
+    background: rgba(25, 45, 34, 0.38);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* HOVER CARD */
+.catalog-section .product:hover {
+    background: rgba(255, 255, 255, 0.20);
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-5px);
+}
+
+/* NAMA PRODUK */
+.catalog-section .product h3 {
+    color: #ffffff;
+}
+
+/* DESKRIPSI */
+.catalog-section .product-info p:not(.price) {
+    color: #eeeeee;
+}
+
+/* KATEGORI */
+.catalog-section .category {
+    color: #d5e8d7;
+}
+
+/* HARGA */
+.catalog-section .price {
+    color: #f5c45e;
+}
+
+.catalog-section .price small {
+    color: #eeeeee;
+}
+
+/* TAMPILAN HP */
+@media (max-width: 768px) {
+    .catalog-section {
+        background-attachment: scroll;
+        background-position: center;
     }
 }
