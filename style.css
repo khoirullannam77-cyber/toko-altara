@@ -740,5 +740,36 @@ img {
     .catalog-section {
         background-attachment: scroll;
         background-position: center;
+        background-size: cover;
+    }
+}
+
+/* OPTIMASI PERFORMA HP */
+@media (max-width: 768px) {
+
+    /* Ringankan efek kaca */
+    .catalog-section .product {
+        background: rgba(25, 52, 38, 0.82);
+
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+        transform: none;
+        transition: none;
+    }
+
+    /* Hilangkan perubahan posisi saat disentuh */
+    .catalog-section .product:hover {
+        transform: none;
+    }
+
+    /* Kurangi efek blur informasi produk */
+    .catalog-section .product-info {
+        background: rgba(25, 45, 34, 0.55);
+
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 }
