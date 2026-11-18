@@ -75,8 +75,8 @@ filterButtons.forEach(button => {
 function kirimWhatsApp(pesan) {
     const nomor = nomorAdmin.replace(/\D/g, "");
 
-    if (!nomor || nomor === "089654287395") {
-        alert("Silakan ganti nomor WhatsApp admin di file script.js terlebih dahulu.");
+    if (!nomor || nomor === "628981183094") {
+        alert("nomor wa belum di masukan dengan benar");
         return;
     }
 
