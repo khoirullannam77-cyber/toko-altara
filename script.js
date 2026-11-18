@@ -72,17 +72,21 @@ filterButtons.forEach(button => {
 });
 
 // PEMESANAN PRODUK VIA WHATSAPP
+// Nomor WhatsApp admin ALATARA
+const nomorn = "628981183094";
+
+// Fungsi mengirim pesan WhatsApp
 function kirimWhatsApp(pesan) {
     const nomor = nomorAdmin.replace(/\D/g, "");
 
-    if (!nomor || nomor === "628981183094") {
-        alert("nomor wa belum di masukan dengan benar");
+    if (!nomor || nomor.length < 10) {
+        alert("Nomor WhatsApp belum dimasukkan dengan benar!");
         return;
     }
 
     const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
 
-    window.open(url, "_blank", "noopener,noreferrer");
+    window.open(url, "_blank");
 }
 
 // TOMBOL PESAN PRODUK
