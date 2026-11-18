@@ -6,7 +6,7 @@
     --beige: #e9e2d0;
     --brown: #795b40;
     --white: #ffffff;
-    --text: #26352b;
+    --text: #1a1c1b;
 }
 
 * {
@@ -22,7 +22,7 @@ html {
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background: #faf9f5;
+    background: #cbc8b2;
     color: var(--text);
     overflow-x: hidden;
 }

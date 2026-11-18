@@ -1,7 +1,7 @@
 
 // NOMOR WHATSAPP ADMIN
 // Ganti dengan nomor WhatsApp ALATARA
-const nomorAdmin = "089654287395";
+const nomorAdmin = "628981183094"
 
 // MENU MOBILE
 const menuBtn = document.getElementById("menuBtn");
@@ -73,7 +73,7 @@ filterButtons.forEach(button => {
 
 // PEMESANAN PRODUK VIA WHATSAPP
 // Nomor WhatsApp admin ALATARA
-const nomorn = "628981183094";
+const nomor = "628981183094";
 
 // Fungsi mengirim pesan WhatsApp
 function kirimWhatsApp(pesan) {
