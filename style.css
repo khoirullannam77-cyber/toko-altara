@@ -1,4 +1,10 @@
 
+/* =================================
+   ALATARA OUTDOOR RENTAL
+   MAIN STYLESHEET
+================================= */
+
+/* ROOT */
 :root {
     --green: #244c38;
     --dark: #193426;
@@ -9,6 +15,7 @@
     --text: #1a1c1b;
 }
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -27,11 +34,13 @@ body {
     overflow-x: hidden;
 }
 
-button, input {
+button,
+input {
     font: inherit;
 }
 
-button, a {
+button,
+a {
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -45,13 +54,16 @@ img {
     max-width: 100%;
 }
 
-/* NAVBAR */
+/* =================================
+   NAVBAR
+================================= */
+
 .header {
     position: sticky;
     top: 0;
     z-index: 100;
     background: rgba(212, 209, 198, 0.97);
-    border-bottom:none;
+    border-bottom: none;
 }
 
 .navbar {
@@ -63,7 +75,7 @@ img {
     justify-content: space-between;
 }
 
-/* LOGO NAVBAR */
+/* LOGO */
 .logo {
     display: flex;
     align-items: center;
@@ -77,8 +89,7 @@ img {
     display: block;
 }
 
-
-
+/* MENU NAVIGASI */
 .nav-links {
     display: flex;
     align-items: center;
@@ -88,25 +99,28 @@ img {
 .nav-links a {
     font-size: 14px;
     font-weight: 600;
-    transition: .3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #8a9d76;
 }
 
+/* TOMBOL MENU HP */
 .menu-btn {
     display: none;
     border: none;
-    
     background: none;
     font-size: 27px;
-    color:white;
+    color: white;
     cursor: pointer;
     padding: 8px;
 }
 
-/* HERO */
+/* =================================
+   HERO
+================================= */
+
 .hero {
     min-height: 600px;
     padding: 100px 8%;
@@ -115,9 +129,13 @@ img {
     color: white;
 
     background:
-        linear-gradient(90deg, rgba(14,38,25,.88), rgba(14,38,25,.25)),
+        linear-gradient(
+            90deg,
+            rgba(14, 38, 25, 0.88),
+            rgba(14, 38, 25, 0.25)
+        ),
         url('https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?w=1800')
-        center/cover;
+        center / cover no-repeat;
 }
 
 .hero-content {
@@ -147,6 +165,7 @@ img {
     color: #e8eee6;
 }
 
+/* TOMBOL UTAMA */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -160,7 +179,7 @@ img {
     font-weight: 700;
     cursor: pointer;
     margin-top: 28px;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -168,7 +187,10 @@ img {
     transform: translateY(-3px);
 }
 
-/* GENERAL SECTION */
+/* =================================
+   GENERAL SECTION
+================================= */
+
 .section {
     padding: 85px 8%;
 }
@@ -201,7 +223,10 @@ img {
     font-size: 14px;
 }
 
-/* ABOUT */
+/* =================================
+   ABOUT
+================================= */
+
 .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -236,7 +261,10 @@ img {
     font-size: 12px;
 }
 
-/* CATALOG */
+/* =================================
+   KATALOG PRODUK
+================================= */
+
 .search-wrapper {
     display: flex;
     justify-content: center;
@@ -257,6 +285,7 @@ img {
     border-color: var(--green);
 }
 
+/* FILTER */
 .filters {
     display: flex;
     justify-content: center;
@@ -273,7 +302,7 @@ img {
     color: var(--green);
     border-radius: 30px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .filter.active,
@@ -282,19 +311,55 @@ img {
     color: white;
 }
 
+/* GRID PRODUK */
 .products {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
+/* =================================
+   BACKGROUND KATALOG
+================================= */
+
+.catalog-section {
+    background:
+        linear-gradient(
+            rgba(10, 15, 12, 0.65),
+            rgba(10, 15, 12, 0.75)
+        ),
+        url("background-produk.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+/* JUDUL KATALOG */
+.catalog-section .section-heading h2 {
+    color: white;
+}
+
+.catalog-section .section-heading p {
+    color: #dddddd;
+}
+
+.catalog-section .section-heading .subtitle {
+    color: #c4d5bd;
+}
+
+/* =================================
+   CARD PRODUK - GLASSMORPHISM
+================================= */
+
 .product {
+    min-width: 0;
     background: white;
     border-radius: 9px;
     overflow: hidden;
     box-shadow: 0 5px 25px #253b2910;
-    transition: transform .3s, box-shadow .3s;
-    min-width: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .product:hover {
@@ -302,16 +367,42 @@ img {
     box-shadow: 0 12px 30px #253b2920;
 }
 
+/* GLASS KHUSUS KATALOG */
+.catalog-section .product {
+    background: rgba(255, 255, 255, 0.13);
+
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.20),
+        inset 0 1px 1px rgba(255, 255, 255, 0.12);
+
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* GAMBAR PRODUK */
 .product img {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
 }
 
+/* INFORMASI PRODUK */
 .product-info {
     padding: 20px;
 }
 
+.catalog-section .product-info {
+    background: rgba(25, 45, 34, 0.45);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* KATEGORI */
 .category {
     color: #849575;
     font-size: 11px;
@@ -319,17 +410,36 @@ img {
     letter-spacing: 1px;
 }
 
+.catalog-section .category {
+    color: #d5e8d7;
+}
+
+/* NAMA PRODUK */
 .product h3 {
     margin: 9px 0;
     color: var(--green);
     font-size: 18px;
 }
 
+.catalog-section .product h3 {
+    color: white;
+}
+
+/* DESKRIPSI */
+.catalog-section .product-info p:not(.price) {
+    color: #eeeeee;
+}
+
+/* HARGA */
 .price {
     font-weight: 800;
     color: var(--brown);
     font-size: 20px;
     margin-bottom: 15px;
+}
+
+.catalog-section .price {
+    color: #f5c45e;
 }
 
 .price small {
@@ -338,6 +448,18 @@ img {
     color: #888;
 }
 
+.catalog-section .price small {
+    color: #eeeeee;
+}
+
+/* HOVER GLASS */
+.catalog-section .product:hover {
+    background: rgba(255, 255, 255, 0.20);
+    border-color: rgba(255, 255, 255, 0.45);
+    transform: translateY(-5px);
+}
+
+/* TOMBOL PESAN */
 .order-btn {
     width: 100%;
     min-height: 46px;
@@ -348,20 +470,24 @@ img {
     border-radius: 5px;
     font-weight: 700;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .order-btn:hover {
     background: #3b694d;
 }
 
+/* PESAN PRODUK KOSONG */
 .empty-message {
     text-align: center;
     padding: 30px;
     color: #777;
 }
 
-/* HOW TO RENT */
+/* =================================
+   CARA MENYEWA
+================================= */
+
 .steps-section {
     background: white;
 }
@@ -396,7 +522,10 @@ img {
     color: #777;
 }
 
-/* CONTACT */
+/* =================================
+   KONTAK
+================================= */
+
 .contact {
     background: var(--green);
     color: white;
@@ -416,11 +545,15 @@ img {
     margin-top: 25px;
 }
 
-/* FOOTER */
+/* =================================
+   FOOTER
+================================= */
+
 .footer {
     padding: 30px 8%;
     background: var(--dark);
     color: #d9e4d8;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -433,8 +566,12 @@ img {
     margin-top: 8px;
 }
 
-/* TABLET */
+/* =================================
+   TABLET
+================================= */
+
 @media (max-width: 900px) {
+
     .navbar {
         padding: 12px 5%;
     }
@@ -452,16 +589,24 @@ img {
     }
 }
 
-/* MOBILE */
+/* =================================
+   MOBILE
+================================= */
+
 @media (max-width: 768px) {
-    .logo img {
-    width: 45px;
-    height: 45px;
-}
+
+    /* NAVBAR */
     .navbar {
-    padding-left: 8px;
-    padding-right: 5%;
-}
+        min-height: 65px;
+        padding-left: 8px;
+        padding-right: 5%;
+    }
+
+    .logo img {
+        width: 45px;
+        height: 45px;
+    }
+
     .menu-btn {
         display: block;
     }
@@ -472,9 +617,11 @@ img {
         top: 100%;
         left: 0;
         width: 100%;
+
         padding: 20px 7%;
         background: var(--cream);
         box-shadow: 0 8px 15px #00000012;
+
         flex-direction: column;
         align-items: flex-start;
         gap: 18px;
@@ -489,6 +636,7 @@ img {
         padding: 5px 0;
     }
 
+    /* HERO */
     .hero {
         min-height: 520px;
         padding: 75px 6%;
@@ -499,10 +647,12 @@ img {
         font-size: clamp(39px, 10vw, 54px);
     }
 
+    /* SECTION */
     .section {
         padding: 65px 6%;
     }
 
+    /* ABOUT */
     .about {
         grid-template-columns: 1fr;
     }
@@ -511,6 +661,7 @@ img {
         height: 270px;
     }
 
+    /* PRODUK */
     .products {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
@@ -528,6 +679,7 @@ img {
         font-size: 17px;
     }
 
+    /* FILTER */
     .filters {
         justify-content: flex-start;
         flex-wrap: nowrap;
@@ -540,19 +692,54 @@ img {
         flex-shrink: 0;
     }
 
+    /* CARA SEWA */
     .steps {
         grid-template-columns: 1fr;
     }
 
+    /* JUDUL */
     .section-heading h2,
     .about-content h2,
     .contact h2 {
         font-size: 31px;
     }
+
+    /* OPTIMASI GLASS EFFECT HP */
+    .catalog-section {
+        background-attachment: scroll;
+        background-position: center;
+    }
+
+    .catalog-section .product {
+        background: rgba(25, 52, 38, 0.82);
+
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+        transition: none;
+    }
+
+    .catalog-section .product-info {
+        background: rgba(25, 45, 34, 0.55);
+    }
+
+    .catalog-section .product:hover {
+        transform: none;
+    }
+
+    .product:hover {
+        transform: none;
+    }
 }
 
-/* HP KECIL */
+/* =================================
+   HP KECIL
+================================= */
+
 @media (max-width: 380px) {
+
     .products {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 9px;
@@ -584,192 +771,21 @@ img {
     }
 }
 
-/* KURANGI ANIMASI BAGI PENGGUNA YANG MEMILIH PREFERENSI INI */
+/* =================================
+   AKSESIBILITAS
+================================= */
+
 @media (prefers-reduced-motion: reduce) {
+
     html {
         scroll-behavior: auto;
     }
 
-    *, *::before, *::after {
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-    }
-}
-
-/* =================================
-   KATALOG BACKGROUND PEGUNUNGAN
-================================= */
-
-.catalog-section {
-    background:
-        linear-gradient(
-            rgba(10, 15, 12, 0.65),
-            rgba(10, 15, 12, 0.75)
-        ),
-        url("background-produk.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* JUDUL KATALOG */
-.catalog-section .section-heading h2 {
-    color: #ffffff;
-}
-
-.catalog-section .section-heading p {
-    color: #dddddd;
-}
-
-/* SUBTITLE */
-.catalog-section .section-heading .subtitle {
-    color: #c4d5bd;
-}
-
-/* KARTU PRODUK */
-
-/* =================================
-   KATALOG BACKGROUND PEGUNUNGAN
-================================= */
-
-.catalog-section {
-    background:
-        linear-gradient(
-            rgba(10, 15, 12, 0.65),
-            rgba(10, 15, 12, 0.75)
-        ),
-        url("background-produk.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* JUDUL KATALOG */
-.catalog-section .section-heading h2 {
-    color: #ffffff;
-}
-
-.catalog-section .section-heading p {
-    color: #dddddd;
-}
-
-/* SUBTITLE */
-.catalog-section .section-heading .subtitle {
-    color: #c4d5bd;
-}
-
-/* KARTU PRODUK */
-.catalog-section .product {
-    background: rgba(20, 49, 37, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-}
-
-/* NAMA PRODUK */
-.catalog-section .product h3 {
-    color: #ffffff;
-}
-
-/* DESKRIPSI PRODUK */
-
-/* FROSTED GLASS - CARD PRODUK */
-.catalog-section .product {
-    background: rgba(255, 255, 255, 0.13);
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    border-radius: 14px;
-
-    box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.20),
-        inset 0 1px 1px rgba(255, 255, 255, 0.20);
-
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-
-/* AREA INFORMASI PRODUK */
-.catalog-section .product-info {
-    background: rgba(25, 45, 34, 0.38);
-
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-}
-
-/* HOVER CARD */
-.catalog-section .product:hover {
-    background: rgba(255, 255, 255, 0.20);
-    border-color: rgba(255, 255, 255, 0.45);
-    transform: translateY(-5px);
-}
-
-/* NAMA PRODUK */
-.catalog-section .product h3 {
-    color: #ffffff;
-}
-
-/* DESKRIPSI */
-.catalog-section .product-info p:not(.price) {
-    color: #eeeeee;
-}
-
-/* KATEGORI */
-.catalog-section .category {
-    color: #d5e8d7;
-}
-
-/* HARGA */
-.catalog-section .price {
-    color: #f5c45e;
-}
-
-.catalog-section .price small {
-    color: #eeeeee;
-}
-
-/* TAMPILAN HP */
-@media (max-width: 768px) {
-    .catalog-section {
-        background-attachment: scroll;
-        background-position: center;
-        background-size: cover;
-    }
-}
-
-/* OPTIMASI PERFORMA HP */
-@media (max-width: 768px) {
-
-    /* Ringankan efek kaca */
-    .catalog-section .product {
-        background: rgba(25, 52, 38, 0.82);
-
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-
-        transform: none;
-        transition: none;
-    }
-
-    /* Hilangkan perubahan posisi saat disentuh */
-    .catalog-section .product:hover {
-        transform: none;
-    }
-
-    /* Kurangi efek blur informasi produk */
-    .catalog-section .product-info {
-        background: rgba(25, 45, 34, 0.55);
-
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
 }
